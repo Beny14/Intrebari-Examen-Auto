@@ -1,0 +1,298 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f1f1fb;
+}
+header{
+    border: 1px solid #cdcdcd;
+    background-color: #fff;
+}
+main{
+    padding-top: 5%;
+    padding-bottom: 3%;
+    background-color: #f1f1fb;
+}
+footer{
+    background-color: #f1f1fb;
+}
+/* logo */
+.box {
+    float: left;
+    width: 33%;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.drpciv{
+    height: 50px;
+    width: 50px;
+    border-right: 1px solid #cdcdcd;
+    padding: 10px;
+}
+/* Header */
+.wellcome{
+    text-align: center;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 600;
+    color: #8f8f8f;
+}
+/* Main */
+.category{
+    margin: 0;
+    text-align: center;
+    color: #525252;
+    padding-bottom: 30px;
+}
+/* Radio buttons */
+.radio-toolbar {
+    text-align: center;
+    padding-bottom: 40px;
+}
+.radio-toolbar input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+.radio-toolbar label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #525252;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    font-weight: 600;
+    border: 3px solid #065693;
+    border-radius: 30px;
+}
+.radio-toolbar input[type="radio"]:checked + label {
+    color: #fff;
+    background-color: #065693;
+    border-color: #065693;
+}
+/* Captcha */
+.captcha {
+    margin: auto;
+    width: 50%;
+    max-width: 330px;
+	background-color: #f9f9f9;
+	border:1px solid  #d3d3d3;
+	border-radius: 3px;
+	color: #4c4a4b;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 500px) {
+	.captcha {
+		flex-direction: column;
+	}
+	.text {
+		margin:.5em !important;
+		text-align: center;
+	}
+	.logo {
+		align-self: center !important;
+	}
+	.spinner {
+		margin: 2em .5em .5em .5em !important;
+	}
+}
+
+.spinner {
+	position: relative;
+	width: 2em;
+	height: 2em;
+	display: flex;
+	margin: 2em 1em;
+	align-items: center;
+	justify-content: center;
+}
+input[type="checkbox"] { 
+    position: absolute; 
+    opacity: 0; 
+    z-index: -1; 
+}
+input[type="checkbox"]+.checkmark {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	background-color: #fcfcfc;
+	border: 2.5px solid #c3c3c3;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+input[type="checkbox"]+.checkmark span {
+	content: '';
+    position: relative;
+	margin-top: -3px;
+	transform: rotate(45deg);
+	width: .75em;
+	height: 1.2em;
+	opacity: 0;
+}
+input[type="checkbox"]+.checkmark>span:after {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 3px;
+	bottom: 0;left:0;
+	background-color: #029f56;
+}
+input[type="checkbox"]+.checkmark>span:before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 3px;
+    bottom: 0;
+    right: 0;
+	background-color: #029f56;
+}
+input[type="checkbox"]:checked+.checkmark { 
+	animation: 2s spin forwards;
+}
+input[type="checkbox"]:checked+.checkmark>span { 
+	animation: 1s fadein 1.9s forwards;
+}
+input[type="checkbox"]:checked+.checkmark>span:after {animation:.3s bottomslide 2s forwards;}
+input[type="checkbox"]:checked+.checkmark>span:before {animation:.5s rightslide 2.2s forwards;}
+@keyframes fadein {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@keyframes bottomslide {
+	0% {width: 0;}
+	100% {width: 100%;}
+}
+@keyframes rightslide {
+	0% {height: 0;}
+	100% {height: 100%;}
+}
+.logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+    margin: 0.5em 1em;
+}
+.logo img {
+	height: 4em;
+	width: 4em;
+}
+.logo small {
+	font-size: .7em;
+}
+
+@keyframes spin {
+	10% {
+		width: 0;
+		height: 0;
+		border-width: 6px;
+	}
+	30% {
+		width: 0;
+		height: 0;
+		border-radius: 50%;
+		border-width: 1em;
+		transform: rotate(0deg);
+		border-color: rgb(199,218,245);
+	}
+	50% {
+		width: 2em;
+		height: 2em;
+		border-radius: 50%;
+		border-width: 4px;
+		border-color: rgb(199,218,245);
+		border-right-color: rgb(89,152,239);
+	}
+	70% {
+		border-width: 4px;
+		border-color: rgb(199,218,245);
+		border-right-color: rgb(89,152,239);
+	}
+	90% {
+		border-width: 4px;
+	}
+	100% {
+		width: 2em;
+		height: 2em;
+		border-radius: 50%;
+		transform: rotate(720deg);
+		border-color: transparent;
+	}
+}
+
+/* Start button */
+.start_btn{
+    text-align: center;
+}
+.start_btn_lang{
+    text-align: center;
+    padding-top: 60px;
+}
+.start{
+    cursor: pointer;;
+    padding: 35px 75px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #065693;
+    font-size: 25px;
+}
+.copyright{
+    text-align: center;
+    color: #8f8f8f;
+}
+
+/* language.html */
+
+.lang-subtitle{
+    text-align: center;
+    color: #8f8f8f;
+    font-weight: 500;
+    line-height: 30px;
+}
+.romania-flag{
+    padding-top: 10px;
+    text-align: center;
+}
+.romania-flagg{
+    box-shadow: 0px 0px 15px 5px #888888;
+    border-radius: 50%;
+}
+.romania-flagg:hover{
+    opacity: 0.9;
+}
+.lang{
+    text-align: center;
+    color: #8f8f8f;
+    font-weight: 500;
+}
+
+/* start.html */
+.w3-card-2{
+    text-align: center;
+    margin: 0 auto;
+}
+.title-card{
+    background-color: #d8d8d8;
+    color: #525252;
+}
+.body-card{
+    font-size: 40px;
+    font-weight: 500;
+    color: #065693;
+}
+.target{
+    padding-top: 15px;
+    text-align: center;
+    color: #525252;
+}
